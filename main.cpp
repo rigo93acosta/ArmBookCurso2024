@@ -4,9 +4,14 @@ int main()
 {
     DigitalIn B1_USER(BUTTON1);
 
-    DigitalOut LD3(LED3);
-
+    DigitalOut LD1(LED1);
+    LD1 = true;
     while (true) {
-        LD3 = B1_USER;
+        if (B1_USER == true) {
+            LD1 = false;
+        }
+        else{
+            LD1 = true;
+        }
     }
 }
